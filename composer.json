@@ -1,0 +1,17 @@
+{
+    "name": "matchingood/mail-parser-client",
+    "description": "Laravel client library for mail-parser-api",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^5.2",
+        "guzzlehttp/guzzle": "^6.2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "MatchinGood\\MailParserClient\\": "src/"
+        }
+    }
+}
