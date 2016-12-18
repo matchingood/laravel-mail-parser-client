@@ -26,16 +26,16 @@ class MailParserClient
                 'mime' => $mime
             ]
         ]);
-        $json = json_decode($response->getBody());
+        $json = json_decode($response->getBody(), true);
 
         $mail = new Mail;
-        $mail->setFrom($json->from)
-            ->setTo($json->to)
-            ->setBcc($json->bcc)
-            ->setCc($json->cc)
-            ->setSubject($json->subject)
-            ->setHtml($json->html)
-            ->setDate($json->date);
+        $mail->setFrom($json['from'])
+            ->setTo($json['to'])
+            ->setBcc($json['bcc'])
+            ->setCc($json['cc'])
+            ->setSubject($json['subject'])
+            ->setHtml($json['html'])
+            ->setDate($json['date']);
         return $mail;
     }
 }
